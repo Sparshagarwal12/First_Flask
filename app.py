@@ -63,7 +63,7 @@ def user():
         else:
             if "email" in session:
                 email = session["email"]
-        return render_template("user.html",email = email)
+        return render_template("user.html",user = user,email = email)
     else:
         return "<h1>No User</h1>"
 
@@ -71,7 +71,7 @@ def user():
 def logout():
     session.pop("user",None)
     session.pop("email",None)
-    return redirect(url_for("login"))
+    return redirect(url_for("home"))
 
 if __name__ == "__main__":
     db.create_all()
