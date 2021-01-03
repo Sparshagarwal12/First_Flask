@@ -42,12 +42,17 @@
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         right: 30px;
     }
-    .details{
+
+    .details {
         /* font-weight: bold; */
         position: absolute;
         text-align: center;
     }
 
+    .edit {
+        position: absolute;
+        margin-top: 200px;
+    }
 </style>
 <h2>Welcome {{user}}</h2>
 <div class="power">
@@ -56,8 +61,14 @@
 <center>
     <div class="box">
         <div class="details">
-            <p>Name:  {{user}} </p>
-            <p>Email:  {{email}} </p>
+            <p>Name: {{user}} </p>
+            <p>Email: {{email}} </p>
+            <div class="edit">
+                <a href="#">
+                    <h6>Edit...</h6>
+                </a>
+            </div>
+
         </div>
         <!-- 
         <form action="#" method="POST">

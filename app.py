@@ -37,7 +37,7 @@ def login():
         if found_user:
             session["email"] = found_user.email
         else:
-            usr = users(user,"")
+            usr = users(user,"Please Enter Your mail")
             db.session.add(usr)
             db.session.commit()
 
@@ -72,6 +72,10 @@ def logout():
     session.pop("user",None)
     session.pop("email",None)
     return redirect(url_for("home"))
+
+@app.route("/form")
+def form():
+    return render_template("form.html")
 
 if __name__ == "__main__":
     db.create_all()

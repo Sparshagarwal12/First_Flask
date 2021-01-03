@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} Form {% endblock %}
+{% block content %}
+<style>
+    .box {
+        height: 550px;
+        border-radius: 10px;
+        margin: 50px;
+        color: #000;
+        background-color: #fff;
+        width: 50%;
+    }
+
+    .center {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .font {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .effect1 {
+        -webkit-box-shadow: 20px 20px 8px -8px #1c2833;
+        -moz-box-shadow: 20px 20px 8px -8px #1c2833;
+        box-shadow: 20px 20px 8px -8px #1c2833;
+    }
+</style>
+<center>
+    <div class="box effect1">
+        <div class="center ">
+            <p>Enter Your Details</p>
+        </div>
+        <div class="font">
+            <p>Name:   <input placeholder="Enter Name" /></p>
+            <p>Email:   <input type="email" name="email" placeholder="Enter Email" /></p>
+        </div>
+    </div>
+</center>
+{% endblock %}
